@@ -1,0 +1,64 @@
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Toggler.css';
+import './Custom.sass';
+import './fonts.css';
+import About from './About';
+import NoPage from './NoPage';
+import Home from './Home';
+import Experience from './Experience';
+import Contact from './Contact';
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import React from 'react';
+
+const Layout = () => {
+
+    return ( 
+        <>  <BrowserRouter>
+                <Navbar fixed='top' expand="lg" data-bs-theme="dark" className="custom-navbar nav-shadow">
+                    <Container>
+                        <Navbar.Brand className='fs-3 text-primary ubuntu-bold'>Tetant</Navbar.Brand>
+                        {/* <button type='button' className='me-auto btn fs-3'><FontAwesomeIcon icon={faMoon} style={{color: "#364CE4"}} /></button> */}
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto roboto-regular">
+                            <Nav.Link><NavLink className={({ isActive }) =>
+                                `navlink text-decoration-none fs-5 d-flex justify-content-end ${
+                                isActive ? 'text-primary' : 'text-secondary'
+                                }`
+                            } to="/">Home</NavLink></Nav.Link>
+                            <Nav.Link><NavLink className={({ isActive }) =>
+                                `navlink text-decoration-none fs-5 d-flex justify-content-end ${
+                                isActive ? 'text-primary' : 'text-secondary'
+                                }`
+                            } to="Experience">Experience</NavLink></Nav.Link>
+                            <Nav.Link><NavLink className={({ isActive }) =>
+                                `navlink text-decoration-none fs-5 d-flex justify-content-end ${
+                                isActive ? 'text-primary' : 'text-secondary'
+                                }`
+                            } to="About">About</NavLink></Nav.Link>
+                            <Nav.Link><NavLink className={({ isActive }) =>
+                                `navlink text-decoration-none fs-5 d-flex justify-content-end ${
+                                isActive ? 'text-primary' : 'text-secondary'
+                                }`
+                            } to="Contact">Contact</NavLink></Nav.Link>
+                        </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="Experience" element={<Experience />} />
+                    <Route path="About" element={<About />} />
+                    <Route path="Contact" element={<Contact />} />
+                    <Route path="*" element={<NoPage />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
+};
+ 
+export default Layout;

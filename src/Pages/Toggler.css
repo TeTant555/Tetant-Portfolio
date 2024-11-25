@@ -1,0 +1,27 @@
+.navbar-toggler {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    right: 15px; 
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: none !important;
+    box-shadow: none !important;
+    position: relative;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%270%200%2030%2030%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cpath%20stroke%3D%27%23364CE4%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-miterlimit%3D%2710%27%20d%3D%27M4%207h22M4%2015h22M4%2023h22%27/%3E%3C/svg%3E");
+}
+
+.navlink:hover {
+    color: #364CE4 !important;
+}
