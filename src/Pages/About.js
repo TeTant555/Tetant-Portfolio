@@ -87,7 +87,7 @@ const About = () => {
         className="display-1 my-auto"><a className="text-secondary" href="https://www.linkedin.com/in/thet-tetant-aung-6b4bb7251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></motion.p>
         <motion.p 
         variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
-        className="display-1 my-auto"><a className="text-secondary" href="https://github.com/TeTant555/Personal.git" target="_blank"><FontAwesomeIcon icon={faSquareGithub} /></a></motion.p>
+        className="display-1 my-auto"><a className="text-secondary" href="https://github.com/TeTant555" target="_blank"><FontAwesomeIcon icon={faSquareGithub} /></a></motion.p>
     </div>
     <div className="bg-black pt-5 pb-4">
         <Container>

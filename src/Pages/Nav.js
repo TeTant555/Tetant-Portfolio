@@ -6,12 +6,12 @@ import './Toggler.css';
 import './Custom.sass';
 import './fonts.css';
 import About from './About';
-import NoPage from './NoPage';
 import Home from './Home';
 import Experience from './Experience';
 import Contact from './Contact';
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 const Layout = () => {
 
@@ -33,17 +33,17 @@ const Layout = () => {
                                 `navlink text-decoration-none fs-5 d-flex justify-content-end ${
                                 isActive ? 'text-primary' : 'text-secondary'
                                 }`
-                            } to="Experience">Experience</NavLink></Nav.Link>
+                            } to="/Experience">Experience</NavLink></Nav.Link>
                             <Nav.Link><NavLink className={({ isActive }) =>
                                 `navlink text-decoration-none fs-5 d-flex justify-content-end ${
                                 isActive ? 'text-primary' : 'text-secondary'
                                 }`
-                            } to="About">About</NavLink></Nav.Link>
+                            } to="/About">About</NavLink></Nav.Link>
                             <Nav.Link><NavLink className={({ isActive }) =>
                                 `navlink text-decoration-none fs-5 d-flex justify-content-end ${
                                 isActive ? 'text-primary' : 'text-secondary'
                                 }`
-                            } to="Contact">Contact</NavLink></Nav.Link>
+                            } to="/Contact">Contact</NavLink></Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -54,7 +54,7 @@ const Layout = () => {
                     <Route path="Experience" element={<Experience />} />
                     <Route path="About" element={<About />} />
                     <Route path="Contact" element={<Contact />} />
-                    <Route path="*" element={<NoPage />} />
+                    <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </BrowserRouter>
         </>

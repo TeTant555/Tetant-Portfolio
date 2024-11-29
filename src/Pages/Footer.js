@@ -65,7 +65,7 @@ const Footer = () => {
                                 initial={"hidden"}
                                 whileInView={"show"}
                                 viewport={{once: false, amount: 0.2}} className='text-secondary mb-1 text-nowrap roboto-regular'><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</motion.p></a>
-                                <a href="https://github.com/TeTant555/Personal.git" target='_blank' className='text-decoration-none'><motion.p
+                                <a href="https://github.com/TeTant555" target='_blank' className='text-decoration-none'><motion.p
                                 variants={fadeIn("up", 0.5)}
                                 initial={"hidden"}
                                 whileInView={"show"}
