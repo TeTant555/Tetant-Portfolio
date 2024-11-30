@@ -81,7 +81,7 @@ const Home = () => {
             <Container className="p-3 d-flex justify-content-center flex-lg-nowrap flex-wrap">
                 <motion.div>
                     <motion.div
-                    variants={fadeIn("up", 0.5)}
+                    variants={fadeIn("up", 0.1)}
                     initial={"hidden"}
                     whileInView={"show"}
                     viewport={{once: false, amount: 0.2}}>
@@ -99,7 +99,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div>
                     <motion.div
-                    variants={fadeIn("up", 0.5)}
+                    variants={fadeIn("up", 0.1)}
                     initial={"hidden"}
                     whileInView={"show"}
                     viewport={{once: false, amount: 0.2}}>
@@ -116,7 +116,7 @@ const Home = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                variants={fadeIn("up", 0.5)}
+                variants={fadeIn("up", 0.1)}
                 initial={"hidden"}
                 whileInView={"show"}
                 viewport={{once: false, amount: 0.2}}>
