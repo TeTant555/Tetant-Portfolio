@@ -64,62 +64,41 @@ const Experience = () => {
             variants={fadeIn("up", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
-            viewport={{once: false, amount: 0.2}} className="h2 bg-dark text-center text-primary pt-4 ubuntu-medium">Skills</motion.h1>
-            <div className="d-flex flex-wrap justify-content-center py-4">
-              <motion.div
+            viewport={{once: false, amount: 0.2}}
+            className="h2 bg-dark text-center text-primary pt-4 ubuntu-medium">Skills</motion.h1>
+            
+            <motion.div
               variants={fadeIn("up", 0.5)}
               initial={"hidden"}
               whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faCode} /></p>
-                <p className="h4 text-center roboto-regular">HTML</p>
-              </motion.div>
-              <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faCss3} /></p>
-                <p className="h4 text-center roboto-regular">CSS</p>
-              </motion.div>
-              <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faJs} /></p>
-                <p className="h4 text-center roboto-regular">JS</p>
-              </motion.div>
-              <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faReact} /></p>
-                <p className="h4 text-center roboto-regular">REACT</p>
-              </motion.div>
-              <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faPhp} /></p>
-                <p className="h4 text-center roboto-regular">PHP</p>
-              </motion.div>
-              <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}} className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                <p className="text-center text-black display-3"><FontAwesomeIcon icon={faGit} /></p>
-                <p className="h4 text-center roboto-regular">GIT</p>
-              </motion.div>
-            </div>
+              viewport={{once: false, amount: 0.2}}
+              className="d-flex flex-wrap justify-content-center py-4">
+              
+              {[
+                { icon: faCode, name: "HTML" },
+                { icon: faCss3, name: "CSS" },
+                { icon: faJs, name: "JS" },
+                { icon: faReact, name: "REACT" },
+                { icon: faPhp, name: "PHP" },
+                { icon: faGit, name: "GIT" }
+              ].map((skill, index) => (
+                <div
+                  key={index}
+                  className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
+                  <p className="text-center text-black display-3">
+                    <FontAwesomeIcon icon={skill.icon} />
+                  </p>
+                  <p className="h4 text-center roboto-regular">{skill.name}</p>
+                </div>
+              ))}
+            </motion.div>
+
             <motion.div
             variants={fadeIn("up", 0.5)}
             initial={"hidden"}
             whileInView={"show"}
-            viewport={{once: false, amount: 0.2}} className="d-flex align-items-center justify-content-center w-100 h-auto">
+            viewport={{once: false, amount: 0.2}}
+            className="d-flex align-items-center justify-content-center w-100 h-auto">
               <Lottie className="animation-custom" animationData={js}></Lottie>
             </motion.div>
         </Container>
