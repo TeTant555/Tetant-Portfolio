@@ -29,7 +29,7 @@ const Layout = () => {
                     onToggle={() => setExpanded(!expanded)}
                 >
                     <Container>
-                        <Navbar.Brand className='fs-3 text-primary ubuntu-bold'>Tetant</Navbar.Brand>
+                        <Navbar.Brand className='fs-3 text-primary ubuntu-bold'>Thet Tetant</Navbar.Brand>
                         {/* <button type='button' className='me-auto btn fs-3'><FontAwesomeIcon icon={faMoon} style={{color: "#364CE4"}} /></button> */}
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
