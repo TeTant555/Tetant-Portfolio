@@ -29,9 +29,8 @@ const Worktogether = () => {
                         <Card.Title className="h1 fs-2 mb-3 text-secondary ubuntu-medium">Let's work together on <br /> your next project</Card.Title>
                         <Card.Text className="d-flex flex-lg-row flex-md-column flex-sm-column flex-column align-items-center">
                             <div className="w-auto pe-lg-5 pe-md-0 pe-sm-0 pe-0 text-secondary text-start mb-3 roboto-regular">
-                                we believe in the power of collaboration. Collaboration drives our projects. 
-                                We work closely with clients and the coding community, turning visions into reality. 
-                                Let’s create something amazing together!
+                                We thrive on collaboration, where innovation meets expertise. By working closely with our clients and 
+                                the coding community, we transform ideas into impactful solutions. Let’s build something extraordinary together!
                             </div>
                             <div className="mx-auto col-12 col-lg-2">
                                 <Button onClick={ToContactUs} className="fs-6 ubuntu-regular" variant="primary">Contact</Button>

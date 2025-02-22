@@ -195,6 +195,11 @@
     outline: none; /* Removes the default browser outline */
   }
 
+  .poster-shadow {
+    box-shadow: 0 15px 25px -3px rgba(0, 0, 0, 0.2), 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
   @media (max-width: 990px) {
     .animation-custom {
       width: 100%;

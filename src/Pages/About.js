@@ -5,7 +5,9 @@ import { faConnectdevelop, faLinkedin, faSquareGithub, faSquareInstagram } from 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { faReact, faJs, faBootstrap } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faJs, faBootstrap, faCss3Alt, faHtml5, faFigma, faNodeJs, faGit, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import Thet from '../Images/Thet-Tetant-Aung.JPG';
 import './fonts.css';
 import { motion } from "framer-motion";
@@ -41,7 +43,8 @@ const About = () => {
                             <motion.p
                             variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
                             className="mt-2 roboto-regular">
-                            I am an aspiring developer with a strong foundation in programming, currently expanding my expertise in <span className="text-primary">HTML</span> , <span className="text-primary">CSS</span> , <span className="text-primary">JavaScript</span> , and frameworks such as <span className="text-primary">React.js</span>.
+                            I am a junior developer with over a year of programming experience, passionate about writing clean and efficient code.
+                            Working on numerous projects and collaborating with teams has strengthened my problem-solving skills and adaptability, shaping me into a versatile developer eager to take on new challenges.
                             </motion.p>
                             <motion.p  
                             variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
@@ -53,7 +56,20 @@ const About = () => {
                             className="h5 primary-border ubuntu-regular">Featured Skills</motion.h3>
                             <motion.p 
                             variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
-                            className="mt-2 fs-2"><FontAwesomeIcon icon={faReact} /> <FontAwesomeIcon icon={faJs} /> <FontAwesomeIcon icon={faBootstrap} /></motion.p>
+                            className="mt-2 fs-2 d-flex gap-3 flex-wrap">
+                            <FontAwesomeIcon icon={faReact} /> 
+                            <FontAwesomeIcon icon={faJs} /> 
+                            <FontAwesomeIcon icon={faBootstrap} />
+                            <FontAwesomeIcon icon={faHtml5} />  
+                            <FontAwesomeIcon icon={faCss3Alt} />  
+                            <FontAwesomeIcon icon={faFigma} /> {/* UI/UX using Figma icon */}  
+                            <FontAwesomeIcon icon={faNodeJs} />
+                            <FontAwesomeIcon icon={faPhp} />  
+                            <FontAwesomeIcon icon={faDatabase} /> {/* MySQL/MongoDB can use generic DB icon */}  
+                            <FontAwesomeIcon icon={faGit} />  
+                            <FontAwesomeIcon icon={faGithub} />  
+                            <FontAwesomeIcon icon={faCode} />
+                            </motion.p>
                         </Col>
                         <Col lg={7} className="mt-lg-4 mt-md-4 mt-sm-0">
                             <motion.h3
@@ -62,7 +78,20 @@ const About = () => {
                             <motion.p
                             variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
                             className="mt-2 roboto-regular">NCC education diploma in computing level (4) <br />
-                            Finished Aug 11, 2024</motion.p>
+                            Finished 2023-2024
+                            </motion.p>
+                            <motion.p  
+                            variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
+                            className="roboto-regular">
+                            NCC education diploma in computing level (5) <br />
+                            Finished 2024-2025
+                            </motion.p>
+                            <motion.p  
+                            variants={fadeIn("up", 0.5)} initial={"hidden"} whileInView={"show"} viewport={{once: false, amount: 0.2}} 
+                            className="roboto-regular">
+                            Matriculation Exam <br />
+                            Passed
+                            </motion.p>
                         </Col>
                     </Row>
                 </Col>

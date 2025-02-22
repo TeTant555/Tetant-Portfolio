@@ -28,6 +28,35 @@ const Experience = () => {
         window.scrollTo(0, 0);
     }, [location]); 
 
+    const skillSections = [
+      {
+        title: "Frontend & UI/UX",
+        animation: js,
+        skills: [
+          { name: "HTML", icon: faCode },
+          { name: "CSS", icon: faCss3 },
+          { name: "JS", icon: faJs },
+          { name: "TS", icon: faCode },
+          { name: "React", icon: faReact },
+          { name: "Redux", icon: faCode },
+          { name: "TW", icon: faCss3 },
+          { name: "UI/UX", icon: faCode },
+        ]
+      },
+      {
+        title: "Back-end Development and Database",
+        animation: codescreen,
+        skills: [
+          { name: "Node.js", icon: faCode },
+          { name: "Express", icon: faCode },
+          { name: "PHP", icon: faPhp },
+          { name: "MySQL", icon: faCode },
+          { name: "MongoDB", icon: faCode },
+          { name: "REST API", icon: faCode },
+        ]
+      }
+    ];
+
     return ( 
     <>
     <div className="bg-black">
@@ -58,49 +87,56 @@ const Experience = () => {
             </motion.div>
         </Container>
     </div>
-    <div className="bg-dark">
-        <Container className="bg-dark">
+    <div>
+        <Container style={{ width: "100%", maxWidth: "75vw" }}>
             <motion.h1
             variants={fadeIn("up", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{once: false, amount: 0.2}}
-            className="h2 bg-dark text-center text-primary pt-4 ubuntu-medium">Skills</motion.h1>
-            
-            <motion.div
-              variants={fadeIn("up", 0.5)}
-              initial={"hidden"}
-              whileInView={"show"}
-              viewport={{once: false, amount: 0.2}}
-              className="d-flex flex-wrap justify-content-center py-4">
-              
-              {[
-                { icon: faCode, name: "HTML" },
-                { icon: faCss3, name: "CSS" },
-                { icon: faJs, name: "JS" },
-                { icon: faReact, name: "REACT" },
-                { icon: faPhp, name: "PHP" },
-                { icon: faGit, name: "GIT" }
-              ].map((skill, index) => (
-                <div
-                  key={index}
-                  className="card-shadow skillwidth p-4 m-2 lh-1 bg-secondary text-white rounded-4">
-                  <p className="text-center text-black display-3">
-                    <FontAwesomeIcon icon={skill.icon} />
-                  </p>
-                  <p className="h4 text-center roboto-regular">{skill.name}</p>
+            className="h2 text-center text-secondary pt-4 ubuntu-medium">Skills and Experiences</motion.h1>
+            {skillSections.map((section, index) => (
+                <div key={index}>
+                    <motion.h1
+                        variants={fadeIn("up", 0.1)}
+                        initial={"hidden"}
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.2}}
+                        className="fs-3 text-left text-primary p-4 ubuntu-medium"
+                    >
+                        {section.title}
+                    </motion.h1>
+                    <motion.div
+                        variants={fadeIn("up", 0.5)}
+                        initial={"hidden"}
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.2}}
+                        className="d-flex mb-4 justifty-content-center align-items-center flex-column p-3 flex-md-row poster-shadow"
+                    >
+                        <motion.div
+                            variants={fadeIn("up", 0.5)}
+                            initial={"hidden"}
+                            whileInView={"show"}
+                            viewport={{once: false, amount: 0.2}}
+                            className="w-100 w-md-50 p-4"
+                        >
+                            <Lottie className="animation-custom" animationData={section.animation}></Lottie>
+                        </motion.div>
+                        <motion.div className="w-100 w-md-50 p-4">
+                            <p className="h4 text-center ubuntu-medium mb-4">
+                                {section.title.split(" ")[0]}
+                            </p>
+                            <div className="tech-container d-flex flex-wrap justify-content-center gap-3">
+                                {section.skills.map((skill, skillIndex) => (
+                                    <div key={skillIndex} className="tech-box rounded-2 text-white">
+                                        <FontAwesomeIcon icon={skill.icon} className="me-2" /> {skill.name}
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
-              ))}
-            </motion.div>
-
-            <motion.div
-            variants={fadeIn("up", 0.5)}
-            initial={"hidden"}
-            whileInView={"show"}
-            viewport={{once: false, amount: 0.2}}
-            className="d-flex align-items-center justify-content-center w-100 h-auto">
-              <Lottie className="animation-custom" animationData={js}></Lottie>
-            </motion.div>
+            ))}
         </Container>
     </div>
     <Worktogether/>

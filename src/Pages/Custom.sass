@@ -45,6 +45,115 @@
 .card-shadow-two 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3)
 
+.tech-container
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+    gap: 1rem
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 1rem
+
+.tech-box
+    background: rgba(0, 0, 0, 0.8)
+    backdrop-filter: blur(5px)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    transition: all 0.3s ease
+    cursor: default
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    font-size: 0.9rem
+    width: 120px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:hover
+        transform: translateY(-2px)
+        background: rgba(0, 0, 0, 0.9)
+        border-color: rgba(255, 255, 255, 0.2)
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2)
+
+.poster-shadow
+    backdrop-filter: blur(4px)
+    border: 1px solid rgba(255, 255, 255, 0.18)
+    border-radius: 10px
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+
+    &:nth-child(even)
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.45)
+
+.animation-custom
+    width: 100%
+    height: auto
+    max-width: 500px
+    margin: 0 auto
+    display: block
+
+    // Different styling for database animation
+    .poster-shadow:nth-of-type(2) &
+        filter: brightness(1.1) contrast(1.1)
+        opacity: 0.95
+
+.tech-box
+    padding: 0.75rem 1.5rem
+    transition: all 0.3s ease
+    cursor: pointer
+    min-width: 150px
+    text-align: center
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.75rem
+    font-size: 1.1rem
+
+    svg
+        font-size: 1.1rem
+
+    &:hover
+        transform: translateY(-5px)
+        border-color: rgba(255, 255, 255, 0.2)
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2)
+
+.poster-shadow:nth-of-type(2) .tech-box
+    min-width: 170px
+    padding: 0.75rem 1.75rem
+
+@media (max-width: 576px)
+    .tech-container
+        grid-template-columns: repeat(2, 1fr)
+        gap: 1rem
+    
+    .tech-box
+        min-width: 130px
+        padding: 0.75rem 1rem
+        font-size: 1rem
+        
+        svg
+            font-size: 1rem
+    
+    .poster-shadow:nth-of-type(2) .tech-box
+        min-width: 140px
+        padding: 0.75rem 1.25rem
+
+@media (max-width: 400px)
+    .tech-container
+        gap: 0.75rem
+    
+    .tech-box
+        min-width: 120px
+        padding: 0.75rem 1rem
+        font-size: 0.95rem
+        
+        svg
+            font-size: 0.95rem
+    
+    .poster-shadow:nth-of-type(2) .tech-box
+        min-width: 130px
+
 @media (max-width: 990px) 
     .custom-width 
         width: 70%
