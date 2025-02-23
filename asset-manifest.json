@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Tetant-Portfolio/static/css/main.0c2beb9d.css",
-    "main.js": "/Tetant-Portfolio/static/js/main.accc42a2.js",
+    "main.css": "/Tetant-Portfolio/static/css/main.655f037a.css",
+    "main.js": "/Tetant-Portfolio/static/js/main.db75377e.js",
     "static/media/Thet-Tetant-Aung.JPG": "/Tetant-Portfolio/static/media/Thet-Tetant-Aung.944c09f22922fe71d386.JPG",
     "index.html": "/Tetant-Portfolio/index.html",
-    "main.0c2beb9d.css.map": "/Tetant-Portfolio/static/css/main.0c2beb9d.css.map",
-    "main.accc42a2.js.map": "/Tetant-Portfolio/static/js/main.accc42a2.js.map"
+    "main.655f037a.css.map": "/Tetant-Portfolio/static/css/main.655f037a.css.map",
+    "main.db75377e.js.map": "/Tetant-Portfolio/static/js/main.db75377e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c2beb9d.css",
-    "static/js/main.accc42a2.js"
+    "static/css/main.655f037a.css",
+    "static/js/main.db75377e.js"
   ]
 }
